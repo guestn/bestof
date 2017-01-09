@@ -4,9 +4,6 @@ import React from 'react';
 import pageData from '../data/pageData';
 import MainMenu from './MainMenu';
 import { Link } from 'react-router';
-
-
-import RangeSlider from './RangeSlider';
 import Button from './Button';
 import { PropTypes } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
@@ -53,7 +50,7 @@ export default class IndexPage extends React.Component {
 		var hash = window.location.hash.slice(1);
 		var accessToken = hash.substr(hash.indexOf("=") + 1)
 		console.log('accessToken: ', accessToken);
-		var urlParams = new URLSearchParams(window.location.search);
+		//var urlParams = new URLSearchParams(window.location.search);
 		//var username = urlParams.get('user');
 		//var username = this.props.location.query.user;
 		this.setState({
@@ -89,7 +86,6 @@ export default class IndexPage extends React.Component {
 		
 		// Now use it!
 		
-
 		fetch(request)
 		.then((response) => {
 			console.log('response',response)
